@@ -23,7 +23,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void itShouldsous() {
-		assertEquals(1, CalculatorService.Soustrct(2,3));
+		assertEquals(-1, CalculatorService.Soustrct(2,3));
 	}
 	@Test
 	public void itShoulddiv() {
