@@ -62,7 +62,15 @@
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
+<distributionManagement>
 
+        <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -295,7 +303,19 @@
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>
                         </configuration>
-                    </plugin>
+                       </plugin>
+                              <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.jboss.maven.plugin}</version>
+                <configuration>
+			        <hostname>127.0.0.1</hostname>
+			        <username>dali</username>
+			        <password>root</password>
+			        <port>9999</port>
+		        </configuration>
+            </plugin>
+                       
                 </plugins>
             </build>
         </profile>
