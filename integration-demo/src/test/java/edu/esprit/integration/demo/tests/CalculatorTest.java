@@ -18,7 +18,7 @@ public class CalculatorTest {
 
 	@Test
 	public void itShouldAdd() {
-		assertEquals(1, CalculatorService.Add(2,3));
+		assertEquals(5, CalculatorService.Add(2,3));
 	}
 	
 	@Test
@@ -27,10 +27,10 @@ public class CalculatorTest {
 	}
 	@Test
 	public void itShoulddiv() {
-		assertEquals(1, CalculatorService.div(2,3));
+		assertEquals(0, CalculatorService.div(2,3));
 	}
 	@Test
 	public void itShouldmult() {
-		assertEquals(1, CalculatorService.multiplie(2,3));
+		assertEquals(6, CalculatorService.multiplie(2,3));
 	}
 }
